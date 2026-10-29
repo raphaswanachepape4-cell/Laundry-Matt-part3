@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+h1{
+    font-size:40px;
+    color: rgb(26, 190, 97);
+    text-decoration:none;
+}
+nav{
+    background-color: rgb(58,58,174);
+    padding: 20px;
+}
+nav ul li a{
+    color: gold;
+    text-decoration: none;
+    
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+nav ul li a:hover{
+    background-color:aquamarine;
+    color:rgb(58,58,174);
+    display: inline-block;
+    padding: 20px;
+}
+
+h2{
+    padding:10px;
+}
+
+.responsive-image{
+    max-width: 100%;
+    height: auto;
+}
+p{
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+.container{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    padding: 20px;
+    align-items: start;
+}
+.container div{
+    background-color: rgb(48, 213, 215);
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+
+.container div p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px; 
+}
+
+@media screen and (max-width: 400px){
+    .container{
+        flex-direction: column;
+    }
+    #map{
+        width: 100%;
+        height: 300px;
+    }
+    body{
+        background-color: lightblue;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#1d0a03;
+    padding: 10px 20px;
+    color: white;
+}
+.nav-links.active{
+    display:flex;
+}
+.humberger{
+    display: block;
+}
+h1{
+    font-size: 30px;
+     color: green;
+    padding-left: 30px;
+    border-bottom: solid thin #023746;
+    padding-bottom: 15px;
+    margin: 0%;
+}
+
+@media screen and (min-width: 200px){
+
+    body{
+        background-color:lightblue;
+        
+    }
+}
+main{
+    background-image: url(_images/Laundry.jpg);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+h1{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+p{
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+}
+#bottomLinks li{
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}

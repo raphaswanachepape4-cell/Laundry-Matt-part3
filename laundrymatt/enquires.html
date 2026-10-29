@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css_assets/myfirststyle.css">
+    <title>Enquiries - Laundry Matt</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        form { max-width: 500px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <header style="background-color: rgb(25, 88, 88);">
+        <img src= "images/logo.png.jpeg" alt="Joyce Bakery Logo" class="responsive-image">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enquiries.html">Enquiries</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main style="background-color: lightcyan;">
+        <h1>Service Enquiry</h1>
+        
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="org-type">Type of Organisation:</label>
+            <select id="org-type" name="org-type" onchange="showNPOOptions()">
+                <option value="">--Please choose--</option>
+                <option value="business">Business</option>
+                <option value="npo">NPO - Non Profit Organisation</option>
+                <option value="individual">Individual</option>
+            </select>
+
+            <!-- THIS SHOWS ONLY IF NPO IS SELECTED -->
+            <div id="npo-options">
+                <label>Are you interested in:</label>
+                <input type="radio" id="volunteer" name="npo-interest" value="volunteer">
+                <label for="volunteer" style="display:inline;">Becoming a Volunteer</label><br>
+                
+                <input type="radio" id="sponsor" name="npo-interest" value="sponsor">
+                <label for="sponsor" style="display:inline;">Becoming a Sponsor</label>
+            </div>
+
+            <label for="message">Your Enquiry:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Enquiry</button>
+        </form>
+    </main>
+
+    <script>
+        function showNPOOptions() {
+            var orgType = document.getElementById("org-type").value;
+            var npoDiv = document.getElementById("npo-options");
+            
+            if (orgType === "npo") {
+                npoDiv.style.display = "block"; 
+            } else {
+                npoDiv.style.display = "none"; 
+            }
+        }
+    </script>
+    <footer>
+			<nav id="bottomLinks">
+			  <ul>
+				<li><a href="index.html">Home</a></li>
+				<li class="currentPage">About</li>
+				<li><a href="services.html">Service</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="enquires.html">Enquires</a></li>
+			  </ul>
+			</nav>
+			<p>
+				&copy; Laundry Matt 2026 | Powered by "Chepape" Web Hosting
+			</p>
+		  </footer>
+</body>
+</html>
